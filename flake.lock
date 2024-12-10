@@ -1,0 +1,345 @@
+{
+  "nodes": {
+    "coua": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs",
+        "pyproject-nix": "pyproject-nix",
+        "sphinx-sparql": "sphinx-sparql",
+        "treefmt-nix": "treefmt-nix"
+      },
+      "locked": {
+        "lastModified": 1733921697,
+        "narHash": "sha256-h18r5QRZVWFw3oqODSXQ/0MkKqx/KWL20jGV6RLw1bA=",
+        "ref": "refs/heads/main",
+        "rev": "0fc2afe74517f80f58a483e9a4646ce2d787b3c6",
+        "revCount": 97,
+        "type": "git",
+        "url": "https://gitlab.dlr.de/ft-ssy-avs/ap/coua.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.dlr.de/ft-ssy-avs/ap/coua.git"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1710146030,
+        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_2"
+      },
+      "locked": {
+        "lastModified": 1710146030,
+        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_3": {
+      "inputs": {
+        "systems": "systems_3"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "mdbook-nixdoc": {
+      "inputs": {
+        "nix-github-actions": [
+          "coua",
+          "pyproject-nix",
+          "nix-github-actions"
+        ],
+        "nixpkgs": [
+          "coua",
+          "pyproject-nix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1708395692,
+        "narHash": "sha256-smf0VmxGbjJDZqKvxxG3ZVqubgbVwAWG26wPo+BT/A0=",
+        "owner": "adisbladis",
+        "repo": "mdbook-nixdoc",
+        "rev": "d6a71b114b9221c0b4f20d31b81766d072cc26be",
+        "type": "github"
+      },
+      "original": {
+        "owner": "adisbladis",
+        "repo": "mdbook-nixdoc",
+        "type": "github"
+      }
+    },
+    "mdbook-nixdoc_2": {
+      "inputs": {
+        "nix-github-actions": [
+          "coua",
+          "sphinx-sparql",
+          "pyproject-nix",
+          "nix-github-actions"
+        ],
+        "nixpkgs": [
+          "coua",
+          "sphinx-sparql",
+          "pyproject-nix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1708395692,
+        "narHash": "sha256-smf0VmxGbjJDZqKvxxG3ZVqubgbVwAWG26wPo+BT/A0=",
+        "owner": "adisbladis",
+        "repo": "mdbook-nixdoc",
+        "rev": "d6a71b114b9221c0b4f20d31b81766d072cc26be",
+        "type": "github"
+      },
+      "original": {
+        "owner": "adisbladis",
+        "repo": "mdbook-nixdoc",
+        "type": "github"
+      }
+    },
+    "nix-github-actions": {
+      "inputs": {
+        "nixpkgs": [
+          "coua",
+          "pyproject-nix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1703863825,
+        "narHash": "sha256-rXwqjtwiGKJheXB43ybM8NwWB8rO2dSRrEqes0S7F5Y=",
+        "owner": "nix-community",
+        "repo": "nix-github-actions",
+        "rev": "5163432afc817cf8bd1f031418d1869e4c9d5547",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-github-actions",
+        "type": "github"
+      }
+    },
+    "nix-github-actions_2": {
+      "inputs": {
+        "nixpkgs": [
+          "coua",
+          "sphinx-sparql",
+          "pyproject-nix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1703863825,
+        "narHash": "sha256-rXwqjtwiGKJheXB43ybM8NwWB8rO2dSRrEqes0S7F5Y=",
+        "owner": "nix-community",
+        "repo": "nix-github-actions",
+        "rev": "5163432afc817cf8bd1f031418d1869e4c9d5547",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-github-actions",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1717281328,
+        "narHash": "sha256-evZPzpf59oNcDUXxh2GHcxHkTEG4fjae2ytWP85jXRo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "b3b2b28c1daa04fe2ae47c21bb76fd226eac4ca1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-24.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "pyproject-nix": {
+      "inputs": {
+        "mdbook-nixdoc": "mdbook-nixdoc",
+        "nix-github-actions": "nix-github-actions",
+        "nixpkgs": [
+          "coua",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1721039766,
+        "narHash": "sha256-8H5z3bAOP5ukdXxSAisg6A1pdOJO2RwuJTsGTS3kpbk=",
+        "owner": "nix-community",
+        "repo": "pyproject.nix",
+        "rev": "8783458df981ba04aa75fad5fc169fb906b1bc50",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "pyproject.nix",
+        "type": "github"
+      }
+    },
+    "pyproject-nix_2": {
+      "inputs": {
+        "mdbook-nixdoc": "mdbook-nixdoc_2",
+        "nix-github-actions": "nix-github-actions_2",
+        "nixpkgs": [
+          "coua",
+          "sphinx-sparql",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1721039766,
+        "narHash": "sha256-8H5z3bAOP5ukdXxSAisg6A1pdOJO2RwuJTsGTS3kpbk=",
+        "owner": "nix-community",
+        "repo": "pyproject.nix",
+        "rev": "8783458df981ba04aa75fad5fc169fb906b1bc50",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "pyproject.nix",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "coua": "coua",
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": [
+          "coua",
+          "nixpkgs"
+        ]
+      }
+    },
+    "sphinx-sparql": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "coua",
+          "nixpkgs"
+        ],
+        "pyproject-nix": "pyproject-nix_2"
+      },
+      "locked": {
+        "lastModified": 1725896812,
+        "narHash": "sha256-XlF2Vq7YEnkax9BlvXyqUMLlcnsOHAre36QSWrmtEQM=",
+        "ref": "refs/heads/main",
+        "rev": "3b7bb2e9649fd101776c9ad320346ca7c560a4ff",
+        "revCount": 21,
+        "type": "git",
+        "url": "https://gitlab.dlr.de/ft-ssy-avs/ap/sphinx-sparql.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.dlr.de/ft-ssy-avs/ap/sphinx-sparql.git"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_3": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "treefmt-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "coua",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1717278143,
+        "narHash": "sha256-u10aDdYrpiGOLoxzY/mJ9llST9yO8Q7K/UlROoNxzDw=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "3eb96ca1ae9edf792a8e0963cc92fddfa5a87706",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
