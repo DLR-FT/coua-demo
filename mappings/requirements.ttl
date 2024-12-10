@@ -1,0 +1,80 @@
+@prefix rml: <http://w3id.org/rml/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix hello: <https://example.com/hello#> .
+@prefix coua: <https://gitlab.dlr.de/ft-ssy-avs/ap/coua/schema#> .
+
+<#LLReqView> rr:sqlQuery """
+select id from requirements where level is 'low';
+""" .
+
+<#LLRequirementsMap> a rr:TriplesMap ;
+  rr:logicalTable <#LLReqView> ;
+  rml:subjectMap [
+    rr:template "https://example.com/requirement/{id}" ;
+    rr:class coua:LowLevelRequirement
+  ] ;
+  rml:predicateObjectMap [
+    rr:predicate coua:requirementId ;
+    rr:objectMap [ rr:column "id" ; ]
+  ] .
+
+<#HLReqView> rr:sqlQuery """
+select id from requirements where level is 'high';
+""" .
+
+<#HLRequirementsMap> a rr:TriplesMap ;
+  rr:logicalTable <#HLReqView> ;
+  rml:subjectMap [
+    rr:template "https://example.com/requirement/{id}" ;
+    rr:class coua:HighLevelRequirement
+  ] ;
+  rml:predicateObjectMap [
+    rr:predicate coua:requirementId ;
+    rr:objectMap [ rr:column "id" ; ]
+  ] .
+
+<#RequirementsMap> a rr:TriplesMap ;
+  rml:logicalSource [
+    a rml:LogicalSource ;
+    rr:sqlVersion rr:SQL2008 ;
+    rr:tableName "requirements"
+  ] ;
+  rml:subjectMap [
+    rr:template "https://example.com/requirement/{id}" ;
+  ] ;
+  rml:predicateObjectMap [
+    rr:predicate coua:description ;
+    rr:objectMap [ rr:column "description" ; ]
+  ] .
+
+<#RationaleMap> a rr:TriplesMap ;
+  rml:logicalSource [
+    a rml:LogicalSource ;
+    rr:sqlVersion rr:SQL2008 ;
+    rr:tableName "requirements"
+  ] ;
+  rml:subjectMap [
+    rr:template "https://example.com/requirement/{id}" ;
+  ] ;
+  rml:predicateObjectMap [
+    rr:predicate coua:rationale ;
+    rr:objectMap [ rr:column "rationale" ; ]
+  ] .
+
+<#TracesMap> a rr:TriplesMap ;
+  rml:logicalSource [
+    a rml:LogicalSource ;
+    rr:sqlVersion rr:SQL2008 ;
+    rr:tableName "traces" ;
+  ] ;
+  rml:subjectMap [
+    rr:template "https://example.com/requirement/{tracee}" ;
+    rr::class coua:Requirement
+  ] ;
+  rml:predicateObjectMap [
+    rr:predicate coua:traces ;
+    rr:objectMap [
+      rr:template "https://example.com/requirement/{traced}" ;
+      rr:termType rr:IRI ;
+    ]
+  ] .

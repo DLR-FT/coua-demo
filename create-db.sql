@@ -1,7 +1,8 @@
 create table requirements (
   id text primary key,
   description text not null,
-  rationale text
+  rationale text,
+  level text not null
 );
 
 create table traces (
@@ -13,8 +14,8 @@ create table traces (
 );
 
 insert into requirements values
-  ('hello.low.1', 'It must work', 'Because things need to work.'),
-  ('hello.high.2','Everything must work.','Because everythin needs to work');
+  ('hello.low.1', 'It must work', 'Because things need to work.', 'low'),
+  ('hello.high.2','Everything must work.','Because everything needs to work', 'high');
 
 insert into traces values
   ('hello.low.1', 'hello.high.2');

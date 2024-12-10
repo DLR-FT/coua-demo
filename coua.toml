@@ -1,0 +1,11 @@
+mode = "do178c"
+
+[artifacts.junit.morph]
+file_path = "target/nextest/ci/junit.xml"
+
+[artifacts.traces.morph]
+file_path = "traces.json"
+
+[artifacts.requirements.morph]
+db_url = "sqlite:///requirements.db"
+mappings = "mappings/requirements.ttl"
