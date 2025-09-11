@@ -1,27 +1,20 @@
 {
-  description = "My hello world";
+  description = "Coua demo";
   inputs = {
-    coua.url = "git+https://gitlab.dlr.de/ft-ssy-avs/ap/coua.git";
-    nixpkgs.follows = "coua/nixpkgs";
-    flake-utils.url = "github:numtide/flake-utils";
+    coua.url = "github:DLR-FT/coua";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
   };
-  outputs = { coua, flake-utils, nixpkgs, ... }: flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
+  outputs = { coua, nixpkgs, ... }:
     let
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [
-          coua.overlays.default
-          (final: prev: {
-            sphinx = prev.sphinx.overrideAttrs {
-              dependencies = (prev.sphinx.dependencies ++ [prev.coua]);
-            };
-          })
-        ];
-      };
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
     in {
-      devShells.default = pkgs.mkShell {
+      devShells.${system}.default = pkgs.mkShell {
         packages = [
-          pkgs.coua
+          coua.packages.${system}.coua
+          coua.packages.${system}.morph-kgc
+          coua.packages.${system}.sphinx-sparql
+
           pkgs.cargo
           pkgs.cargo-nextest
           pkgs.gnumake
@@ -33,6 +26,5 @@
           pkgs.sqlite
         ];
       };
-    }
-  );
+    };
 }
