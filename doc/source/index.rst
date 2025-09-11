@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-my-hello-world documentation
+Coua Demo
 ============================
 
 Add your content using ``reStructuredText`` syntax. See the
@@ -16,9 +16,28 @@ documentation for details.
    :caption: Contents:
 
 
-.. coua:requirements_section::
+Software and associated software level
+--------------------------------------
+.. coua:software_level_list::
 
 
-Source Code Requirements Tracing
---------------------------------
+Check results
+-------------
+.. coua:check_list::
+
+
+The following objectives require an independent review:
+
+.. coua:requires_independence::
+
+.. coua:requirements::
+
+
+Source Code Tracability Matrix
+------------------------------
 .. coua:source_code_tracability_matrix::
+
+
+Requirements Test Coverage Matrix
+---------------------------------
+.. coua:requirements_test_coverage_matrix::

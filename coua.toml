@@ -1,10 +1,18 @@
-mode = "do178c"
+[project]
+name = "Coua Demo"
+
+[checks]
+suites = ["do178c", "coua", "cobertura"]
+
+[do178c]
+software = "https://dlr.de/ft/ssy/coua-demo"
+software_level = "A"
 
 [artifacts.junit.morph]
-file_path = "target/nextest/ci/junit.xml"
+file_path = "junit.xml"
 
-[artifacts.traces.morph]
-file_path = "traces.json"
+[artifacts."traces.json"]
+type = "malkoha"
 
 [artifacts.requirements.morph]
 db_url = "sqlite:///requirements.db"

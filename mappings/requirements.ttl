@@ -33,6 +33,21 @@ select id from requirements where level is 'high';
     rr:objectMap [ rr:column "id" ; ]
   ] .
 
+<#SYRequirementsMap> a rr:TriplesMap ;
+  rr:logicalTable <#SYReqView> ;
+  rml:subjectMap [
+    rr:template "https://example.com/requirement/{id}" ;
+    rr:class coua:SystemLevelRequirement
+  ] ;
+  rml:predicateObjectMap [
+    rr:predicate coua:requirementId ;
+    rr:objectMap [ rr:column "id" ; ]
+  ] .
+
+<#SYReqView> rr:sqlQuery """
+select id from requirements where level is 'system';
+""" .
+
 <#RequirementsMap> a rr:TriplesMap ;
   rml:logicalSource [
     a rml:LogicalSource ;

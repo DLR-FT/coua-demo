@@ -27,4 +27,6 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 
 # -- Coua --
-coua_load = [("../../coua.nt", "application/n-triples")]
+coua_load = [
+    ("../../coua.nq", "application/n-quads"),
+]

@@ -2,3 +2,10 @@
 coua.nt
 /doc/build
 traces.json
+.coverage
+.direnv
+__pycache__/
+coua.nq
+coverage.xml
+junit.xml
+requirements.db

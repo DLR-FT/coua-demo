@@ -15,7 +15,9 @@ create table traces (
 
 insert into requirements values
   ('hello.low.1', 'It must work', 'Because things need to work.', 'low'),
-  ('hello.high.2','Everything must work.','Because everything needs to work', 'high');
+  ('hello.high.2','Everything must work.','Because everything needs to work', 'high'),
+  ('hello.system.3','Everything in the aircraft work.','Because it needs to fly', 'system');
 
 insert into traces values
-  ('hello.low.1', 'hello.high.2');
+  ('hello.low.1', 'hello.high.2'),
+  ('hello.high.2', 'hello.system.3');
