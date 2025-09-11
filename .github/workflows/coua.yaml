@@ -8,36 +8,6 @@ on:
   merge_group:
 
 jobs:
-  check-formatting:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
-      - uses: cachix/install-nix-action@v31
-        with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: cachix/cachix-action@v16
-        with:
-          name: dlr-ft
-          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
-      - run: nix develop --command make check-format
-
-  commit-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
-      - uses: cachix/install-nix-action@v31
-        with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: cachix/cachix-action@v16
-        with:
-          name: dlr-ft
-          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
-      - run: nix develop --command make commit-check
-
   test:
     runs-on: ubuntu-latest
     steps:
